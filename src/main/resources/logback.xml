@@ -1,0 +1,26 @@
+<configuration>
+
+    <!-- Консольный аппендер -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Уровни для шумных библиотек -->
+    <logger name="org.http4s" level="INFO"/>
+    <logger name="org.http4s.ember" level="WARN"/>
+    <logger name="org.http4s.server.middleware" level="INFO"/>
+    <logger name="doobie" level="WARN"/>
+    <logger name="liquibase" level="INFO"/>
+    <logger name="com.zaxxer.hikari" level="WARN"/>
+
+    <!-- Твой код -->
+    <logger name="com.ieshua.ai" level="INFO"/>
+
+    <!-- По умолчанию: только INFO и выше -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

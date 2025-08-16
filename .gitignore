@@ -1,5 +1,8 @@
 *.ipr
 *.iws
+
+src/main/resources/first_session.txt
+
 target/
 trading.home_IS_UNDEFINED/
 catalina.home_IS_UNDEFINED/
